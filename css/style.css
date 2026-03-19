@@ -1,0 +1,99 @@
+
+        :root {
+            --main-color: #ffd741;
+            --second-color: #333;
+            --third-color: #cecece36;
+            --fourth-color: #f6f6f6;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+            nav{
+                top: 0;
+                z-index: 1000; 
+                /* prevent overlap issues */
+                position: sticky;
+                background-color: var(--fourth-color);
+                padding-bottom: 3px;
+            }
+        .nav-head {
+            height: 50px;
+            background-color: var(--main-color);
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            align-content: center;
+        }
+
+        .nav-body {
+            display: flex;
+            justify-content: space-around;
+            margin-left: 120px;
+            margin-right: 120px;
+            margin-top: 20px;
+            margin-bottom: 20px; 
+            background-color: #f6f6f630;
+            border: 0.8px solid var(--fourth-color);
+        }
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+
+        .logo {
+            height: 60px;
+            width: 150px;
+        }
+
+        .nav-body1 {
+            height: 80px;
+        }
+
+        .nav-body2 {
+            height: 80px;
+        }
+
+        ul {
+            gap: 26px;
+            margin-right: 29px;
+            padding-top: 15px;
+        }
+
+        .nav-body3 {
+            height: 80px;
+            align-items: center;
+            display: flex;
+            gap: 12px;
+        }
+
+        li {
+
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .download {
+            background-color: var(--main-color);
+            color: black;
+            height: 30px;
+            width: 100px;
+            font-size: 14px;
+            border-radius: 3px;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 6px;
+            border: none;
+            cursor: pointer;
+            margin-right: 12px;
+        }
+        .nav-body3 li i{
+            margin-right: 8px;
+        }
+
+        .lore{
+            margin-top: 20px;
+        }
+        
