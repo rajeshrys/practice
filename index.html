@@ -3,11 +3,12 @@
 
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Download UltraEdit text editor</title>
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
 
 <body>
@@ -17,8 +18,12 @@
         </div>
         <div class="nav-body">
             <div class="nav-body1">
-                <img class="logo" src="images/UE_Site-Logo-1.png" alt="ultraedit-logo">
+                <!-- If logo image is unavailable, fallback text shows -->
+                <img class="logo" src="images/UE_Site-Logo-1.png" alt="UltraEdit"
+                    onerror="this.style.display='none'; this.nextElementSibling.style.display='block'">
+                <span class="logo-fallback" style="display:none;">UltraEdit</span>
             </div>
+
             <div class="nav-body2">
                 <ul>
                     <li>Products</li>
@@ -29,25 +34,71 @@
                     <li>Company</li>
                 </ul>
             </div>
+
             <div class="nav-body3">
                 <button class="download">Download</button>
-                <li><i class="fa-solid fa-globe"></i>English</li>
-                <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                <ul>
+                    <li><i class="fa-solid fa-globe"></i>English</li>
+                    <li><i class="fa-solid fa-magnifying-glass"></i></li>
+                </ul>
+            </div>
+
+            <!-- Hamburger for mobile -->
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
+
+        <!-- Mobile dropdown menu -->
+        <ul class="mobile-menu" id="mobileMenu">
+            <li>Products</li>
+            <li>Buy</li>
+            <li>Renew</li>
+            <li>Support</li>
+            <li>Learn</li>
+            <li>Company</li>
+            <li><i class="fa-solid fa-globe" style="margin-right:8px"></i>English</li>
+            <li style="border-bottom:none; padding-top:14px;">
+                <button class="download" style="width:100%; height:42px; font-size:15px;">Download</button>
+            </li>
+        </ul>
     </nav>
-    <div class="Grid-practice">
 
-        <div class="Grid"><span>English</span> </div>
-        <div class="Grid"><span>Telugu</span> </div>
-        <div class="Grid"><span>Hindi</span> </div>
-        <div class="Grid"><span>Tamil</span> </div>
-        <div class="Grid"><span>Punjab</span> </div>
-        <div class="Grid"><span>Bengali</span> </div>
-        <div class="Grid"><span>kannada</span> </div>
-        <div class="Grid"><span>Gurajati</span> </div>
-        <div class="Grid"><span>Marathi</span> </div>
+    <div class="lore">
+        Choose Your Language
+        <span>Select the language you'd like to learn or explore</span>
     </div>
-</body>
 
+    <div class="Grid-practice">
+        <div class="Grid"><span>English</span></div>
+        <div class="Grid"><span>Telugu</span></div>
+        <div class="Grid"><span>Hindi</span></div>
+        <div class="Grid"><span>Tamil</span></div>
+        <div class="Grid"><span>Punjab</span></div>
+        <div class="Grid"><span>Bengali</span></div>
+        <div class="Grid"><span>Kannada</span></div>
+        <div class="Grid"><span>Gujarati</span></div>
+        <div class="Grid"><span>Marathi</span></div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            const hamburger = document.getElementById('hamburger');
+            const menu = document.getElementById('mobileMenu');
+            hamburger.classList.toggle('open');
+            menu.classList.toggle('open');
+        }
+
+        // Close menu on outside click
+        document.addEventListener('click', function (e) {
+            const nav = document.querySelector('nav');
+            if (!nav.contains(e.target)) {
+                document.getElementById('hamburger').classList.remove('open');
+                document.getElementById('mobileMenu').classList.remove('open');
+            }
+        });
+    </script>
+</body>
 </html>
