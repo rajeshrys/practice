@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    text-decoration: none;
+    padding: 0;
+}
+nav{
+    min-height: 70px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 20, 255);
+    top: 0;
+    position: sticky;
+    padding-bottom: 30px; 
+    z-index: 1000;
+}
+
+.content{
+    margin-top: 20px;
+    min-height: 40vh;
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 22px;
+    background-color: rgba(115, 112, 112, 0.084);
+    box-shadow: 0px 0px 5px 1px gray;
+}
+.content:hover{
+    transform: translateY(-8px);
+}
+.explores{
+    display: flex;
+    align-items: center;
+    justify-self: flex-start;
+    padding: 20px;
+}
+.explore{
+    padding: 10px;
+    color: white;
+    border:none;
+    min-height: 30px;
+    min-width: 70px;
+    background-color: rgb(231, 20, 231);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.Title{
+    font-size: 27px;
+}
+.Author{
+    font-size: 20px;
+}
+.Blog{
+    font-size: 17px;
+}
+
+span{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+    margin-top: 12px;
+    padding-top: 20px;
+}
+a{
+    color: white;
+}
+nav > span{
+    margin-bottom: 22px;
+    margin-left: 22px;
+    margin-top: 12px;
+    background-color: white;
+    color: black; 
+    padding: 10px;
+    font-size: 23px;
+    border-radius:42px;
+    font-size: 33px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    gap: 23px;
+    margin-right: 50px;
+}
+ul li{
+    list-style: none;
+    background-color: white;
+    color: black;
+    padding: 12px;
+    border-radius: 42%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+@media (max-width: 480px){
+    ul{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav > span{
+    margin-bottom: 22px;
+    margin-left: 22px;
+    background-color: white;
+    color: black; 
+    padding: 10px;
+    font-size: 23px;
+    border-radius:42px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+    ul li{
+    background-color: white;
+    color: black;
+    padding: 12px;
+    border-radius: 42%;
+    }
+    .explores{
+        min-width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    }
+    .explore{
+    padding: 10px;
+    color: white;
+    border:none;
+    min-height: 30px;
+    min-width: 100%;
+    background-color: rgb(231, 20, 231);
+    border-radius: 12px;
+    cursor: pointer;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+}
